@@ -4,10 +4,10 @@ package poker.model;
  * Representa os valores das cartas
  */
 public enum ValorEnum {
-    AS("AS", 14),
-    REI("Rei", 13),
-    DAMA("Dama", 12),
-    VALETE("Valete", 11),
+    AS("A", 14),
+    REI("K", 13),
+    DAMA("Q", 12),
+    VALETE("J", 11),
     DEZ("10", 10),
     NOVE("9", 9),
     OITO("8", 8),

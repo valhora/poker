@@ -16,7 +16,6 @@ public class BaralhoTest extends TestCase {
     public void testCriarBaralho() throws Exception {
         Baralho baralho = new Baralho();
         assertEquals(52,baralho.size());
-        System.out.println(baralho.cartas);
     }
 
     /**
@@ -29,7 +28,6 @@ public class BaralhoTest extends TestCase {
         ArrayList<Carta> cartas = baralho.darCartas(5);
         assertEquals(5,cartas.size());
         assertEquals(47, baralho.size());
-        System.out.println(cartas);
     }
 
 }

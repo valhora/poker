@@ -4,6 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import poker.model.BaralhoTest;
+import poker.model.CartaTest;
 import poker.model.MaoTest;
 
 /**
@@ -30,6 +31,7 @@ public class AppTest
         TestSuite suite = new TestSuite("All Tests");
         suite.addTest(new TestSuite(BaralhoTest.class));
         suite.addTest(new TestSuite(MaoTest.class));
+        suite.addTest(new TestSuite(CartaTest.class));
 
         return suite;
     }
