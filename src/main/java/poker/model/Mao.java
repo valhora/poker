@@ -1,6 +1,9 @@
 package poker.model;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 
 /**
  * Representa uma mão de cartas
@@ -27,11 +30,7 @@ public class Mao implements Comparable<Mao>{
         return cartas;
     }
 
-    public Carta getHighCard() {
-        return cartasOrdenadas.get(0);
-    }
-
-    /**
+     /**
      * preenche a mão com cartas do baralho
      */
     public ArrayList<Carta> pegaCartas() {
