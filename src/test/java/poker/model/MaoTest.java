@@ -74,7 +74,7 @@ public class MaoTest extends TestCase {
      * testa atribuição de ranking das mãos
      *
      */
-    public void xxtestGetRanking() throws Exception {
+    public void testGetRanking() throws Exception {
 
         Baralho baralho = new Baralho();
         Mao mao = new Mao(baralho);
