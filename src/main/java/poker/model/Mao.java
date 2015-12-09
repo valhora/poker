@@ -69,10 +69,12 @@ public class Mao implements Comparable<Mao>{
         Carta quarteto = null;
         ArrayList<Carta> restantes = new ArrayList<Carta>();
 
-        ArrayList<Carta> valoresDiferentes = new  ArrayList(new HashSet<Carta>(cartasOrdenadas));
+
+        HashSet<Carta> hashSet = new HashSet<Carta>(cartasOrdenadas);
+        ArrayList<Carta> valoresDiferentes = new ArrayList<Carta>(hashSet);
+
         Collections.sort(valoresDiferentes);
 
-        ArrayList<Carta> valoresIguais = new ArrayList<Carta>();
         for (Carta carta:valoresDiferentes) {
 
             int qtd = Collections.frequency(cartas,carta);
@@ -195,15 +197,25 @@ public class Mao implements Comparable<Mao>{
             return 1; //after
         } else {
             for (int i = 0; i < this.cartasRank.size(); i++) {
-                if (this.cartasRank.get(i).compareTo(o.cartasRank.get(i)) < 0) {
+                if (this.cartasRank.get(i).compareTo(o.cartasRank.get(i)) > 0) {
                     return -1; //before
-                } else if (this.cartasRank.get(i).compareTo(o.cartasRank.get(i)) > 0) {
+                } else if (this.cartasRank.get(i).compareTo(o.cartasRank.get(i)) < 0) {
                     return 1; //after
-                } else {
-                    return 0;
                 }
             }
+            return 0;
         }
-        return 0;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder(cartas.get(0).toString());
+        for (int i = 1; i < cartas.size() ; i++) {
+            stringBuilder.append(" ");
+            stringBuilder.append(cartas.get(i).toString());
+        }
+        stringBuilder.append(" - ");
+        stringBuilder.append(this.getRanking().toString());
+        return stringBuilder.toString();
     }
 }

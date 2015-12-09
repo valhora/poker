@@ -11,7 +11,7 @@ public enum RankingEnum {
     STRAIGHT("Straight", 5),
     FLUSH("Flush", 4),
     FULL_HOUSE("Full House", 3),
-    FOUR_OF_A_KIND("Four of a kind", 24),
+    FOUR_OF_A_KIND("Four of a kind", 2),
     STRAIGHT_FLUSH("Straight Flush", 1);
 
     private final String label;
